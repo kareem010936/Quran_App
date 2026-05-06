@@ -29,6 +29,7 @@ class SurahAyatScreen extends StatelessWidget {
           backgroundColor: const Color(0xFF0e6058),
           elevation: 0,
           centerTitle: true,
+          iconTheme: const IconThemeData(color: Colors.white),
           title: const Text(
             "آيات السورة",
             style: TextStyle(

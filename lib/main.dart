@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:quran/Screens/AuthGate.dart';
 import 'firebase_options.dart';
-
 import 'package:quran/Cubit_of_Aqar/Cubit_TO_DO.dart';
 import 'package:quran/Cubit_of_Aqar/Cubit_of_List_Ayat.dart';
 import 'package:quran/Cubit_of_Aqar/Cubit_of_List_Suraht.dart';
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
           "SurahAyat": (context) => SurahAyatScreen(),
           "tasbeeh": (context) => TasbeehScreen(),
         },
-        home: LoginScreen(),
+        home: AuthGate(),
       ),
     );
   }

@@ -8,12 +8,13 @@ class CubitOfListAyat extends Cubit<Appstate> {
 
   void fetchAyat(int surahNumber) async {
     try {
-      emit(LoadingState()); 
-      final List<Map<String, dynamic>> ayahs = await api.fetchAyahs(surahNumber);
+      emit(LoadingState());
+      final List<Map<String, dynamic>> ayahs =
+          await api.fetchAyahs(surahNumber);
 
-      emit(SuccessStateOfListOfSurah(list: ayahs)); 
+      emit(SuccessStateOfListOfSurah(list: ayahs));
     } catch (e) {
-      emit(ErrorState(error: e.toString())); 
+      emit(ErrorState(error: e.toString()));
     }
   }
 }
