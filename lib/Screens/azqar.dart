@@ -117,9 +117,11 @@ class _AzqarState extends State<Azqar> {
                             );
                           } else if (state is SuccessState) {
                             return ListView.builder(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 10,
-                                vertical: 6,
+                              padding: const EdgeInsets.fromLTRB(
+                                10,
+                                6,
+                                10,
+                                90,
                               ),
                               itemCount: state.ls.length,
                               itemBuilder: (context, index) {

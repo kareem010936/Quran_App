@@ -97,7 +97,12 @@ class DuaScreenState extends State<DuaScreen> {
             ),
           ),
           ListView.builder(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
+            padding: const EdgeInsets.fromLTRB(
+              14,
+              16,
+              14,
+              90,
+            ),
             itemCount: duas.length,
             itemBuilder: (context, index) {
               final isFav = favorites.contains(index);

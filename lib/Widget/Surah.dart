@@ -10,45 +10,40 @@ class Surah extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      borderRadius: BorderRadius.circular(22),
+      borderRadius: BorderRadius.circular(16),
       onTap: () {
-        Navigator.pushNamed(
-          context,
-          "SurahAyat",
-          arguments: x.number,
-        );
+        Navigator.pushNamed(context, "SurahAyat", arguments: x.number);
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(22),
-          gradient: const LinearGradient(
-            colors: [
-              Color(0xFF0e6058),
-              Color(0xFF12796F),
-            ],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          ),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.12),
-              blurRadius: 10,
-              offset: const Offset(0, 4),
+              color: Colors.black.withOpacity(0.06),
+              blurRadius: 8,
+              offset: const Offset(0, 3),
             ),
           ],
         ),
         child: Row(
           children: [
-            CircleAvatar(
-              radius: 24,
-              backgroundColor: Colors.white,
-              child: Text(
-                "${x.number}",
-                style: const TextStyle(
-                  color: Color(0xFF0e6058),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
+            Container(
+              width: 44,
+              height: 44,
+              decoration: BoxDecoration(
+                color: const Color(0xFF0e6058),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Center(
+                child: Text(
+                  "${x.number}",
+                  style: GoogleFonts.cairo(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -61,26 +56,24 @@ class Surah extends StatelessWidget {
                     x.name,
                     textAlign: TextAlign.right,
                     style: GoogleFonts.cairo(
-                      color: Colors.amber,
-                      fontSize: 24,
+                      color: const Color(0xFF0e6058),
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 2),
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 4,
-                    ),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.16),
-                      borderRadius: BorderRadius.circular(20),
+                      color: const Color(0xFF0e6058).withOpacity(0.08),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
                       x.type,
                       style: GoogleFonts.cairo(
-                        color: Colors.white,
-                        fontSize: 14,
+                        color: const Color(0xFF0e6058),
+                        fontSize: 12,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -88,37 +81,40 @@ class Surah extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(width: 10),
+            const SizedBox(width: 14),
             Column(
               children: [
                 Text(
-                  "عدد الآيات",
+                  "آيات",
                   style: GoogleFonts.cairo(
-                    color: Colors.white70,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
+                    color: Colors.grey.shade500,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
-                const SizedBox(height: 4),
                 Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 14,
-                    vertical: 8,
-                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.15),
-                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.amber.withOpacity(0.15),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text(
                     "${x.count}",
                     style: GoogleFonts.cairo(
-                      color: Colors.white,
-                      fontSize: 18,
+                      color: const Color(0xFF0e6058),
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
               ],
+            ),
+            const SizedBox(width: 8),
+            Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.grey.shade400,
+              size: 16,
             ),
           ],
         ),
