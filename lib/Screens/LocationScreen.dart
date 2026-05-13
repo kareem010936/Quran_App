@@ -4,6 +4,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'home.dart';
 
 class LocationScreen extends StatefulWidget {
+  const LocationScreen({super.key});
+
   @override
   _LocationScreenState createState() => _LocationScreenState();
 }
