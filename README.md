@@ -90,7 +90,7 @@ lib/
 # صور من التطبيق 📱
 
 <p align="center">
-  <img src="assets/app_preview.png" width="100%" />
+  <img src="assets/img_3.jpeg" width="100%" />
 </p>
 
 ---
