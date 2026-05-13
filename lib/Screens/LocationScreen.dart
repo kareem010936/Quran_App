@@ -45,7 +45,7 @@ class _LocationScreenState extends State<LocationScreen> {
     {
       "name": "شرم الشيخ، مصر",
       "icon": FontAwesomeIcons.umbrellaBeach,
-      "city": "Sharm El-Sheikh",
+      "city": "SharmElSheikh",
       "country": "Egypt"
     },
     {
